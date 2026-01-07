@@ -1,0 +1,16 @@
+# Artefactos de compilación
+*.exe
+*.o
+main
+*.out
+
+# Logs (aunque ya están en logs/, por si acaso)
+*.log
+
+# Directorios temporales
+tmp/
+temp/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
