@@ -1,37 +1,36 @@
 # Logger
 
-Este proyecto implementa un sistema de logging simple en C. Permite registrar mensajes con diferentes niveles de severidad (INFO, WARNING, ERROR, DEBUG) en un archivo de log. Incluye rotación automática del archivo cuando supera los 4KB.
+Descripción
+- Librería simple en C para logging (INFO, WARN, ERROR) a archivo con rotación automática.
 
-## Estructura del Proyecto
+Requisitos
+- `gcc` (o `clang`), utilidades estándar de Unix.
 
-- `logger.h`: Definiciones y prototipos de funciones.
-- `logger.c`: Implementación del logger.
-- `main.c`: Ejemplo de uso del logger.
-- `logs/`: Directorio para los archivos de log.
+Uso rápido
+1. Abrir la carpeta del proyecto:
 
-## Compilación
+```bash
+cd Logger
+```
 
-Ejecuta el script `build.sh` para compilar el proyecto:
+2. Compilar con el script `build.sh`:
 
 ```bash
 ./build.sh
 ```
 
-Esto generará el ejecutable `main`.
-
-## Uso
-
-Después de compilar, ejecuta:
+3. Ejecutar el binario resultante:
 
 ```bash
 ./main
 ```
 
-El programa registrará varios mensajes de log en `logs/app.log`.
+Opciones del `build.sh`
+- `./build.sh clean` — limpia artefactos de compilación.
 
-## Funcionalidades
+Notas
+- Los logs se escriben en `logs/app.log` (rotación a 4KB).
+- Para comprobar fugas de memoria usa `valgrind --leak-check=full ./main`.
 
-- Inicialización del log con `log_init()`.
-- Registro de mensajes con `log_message()`.
-- Cierre del log con `log_close()`.
-- Rotación automática del archivo de log.
+Licencia
+- MIT
